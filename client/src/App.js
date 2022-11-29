@@ -10,15 +10,13 @@ const client = new ApolloClient({
 console.log('v');
 function App() {
 	return (
-		<ApolloProvider client={client} class="flex">
-			<div id="main" className="flex w-[100%] space-x-40 mx-28 pt-[10%] ">
-				<p class=" mt-9 text-3xl  text-amber-800   italic"> GraphQl Books Rendering with netliFly: </p>
-				<div class="block">
-					<BookList class="flex mt-2 border-solide" />
-				</div>
-				<div class="block">
-					<AddBook class="flex" />
-				</div>
+		<ApolloProvider client={client}>
+			<div id="main" className="flex content-center space-x-20 p-[5%] ">
+				<p class=" mt-9 text-3xl  text-amber-800 text-center  italic">GraphQl Books Rendering with NetliFly:</p>
+
+				<BookList />
+
+				<AddBook />
 			</div>
 		</ApolloProvider>
 	);

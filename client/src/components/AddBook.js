@@ -40,7 +40,7 @@ const AddBook = () => {
 		return e;
 	};
 	return (
-		<div class="flex w-[200px]">
+		<div class="block w-[200px]">
 			<form id="add-book" onSubmit={submitForm} class="flex-1 content-start ">
 				<div
 					class="justify-between flex mt-5 space-x-4 text-lg"

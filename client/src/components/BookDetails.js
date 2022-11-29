@@ -6,7 +6,7 @@ function BookDetails(props) {
 	const { loading, error, data } = useQuery(getBookQuery, { variables: { authorId: props.book.authorId } });
 	console.log(data);
 	return (
-		<div id="book-details" class="w-[220px]">
+		<div id="book-details" class="w-[220px] block h-auto">
 			<p class="font-bold text-xl ml-[-20px]">
 				Book name :<p class="italic ml-4 font-normal"> {props.book.name}</p>
 			</p>

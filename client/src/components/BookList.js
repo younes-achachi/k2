@@ -19,16 +19,16 @@ const BookList = () => {
 	console.log('touche', { data });
 
 	return (
-		<React.Fragment>
-			<div>
-				<ul id="book-list" class="overflow-auto w-40 h-100  content-center items-center">
+		<div class="flex h-auto space-x-10 space-h-10">
+			<div class="block">
+				<ul id="book-list" class="overflow-auto   h-100 ">
 					{data.books.map((e, i) => {
 						return (
 							<li
 								onClick={() => setSelectedBook(e)}
 								id={i}
-								style={{ listStyleType: 'square' }}
-								class="flex-none mt-2 cursor-pointer border-2 border-black border-solid border-l-4 rounded"
+								style={{ listStyleType: '' }}
+								class="flex-none mt-2 text-center cursor-pointer border-2 border-black border-solid border-l-4 rounded"
 								key={i}
 							>
 								{e.name}
@@ -37,10 +37,10 @@ const BookList = () => {
 					})}
 				</ul>
 			</div>
-			<div class=" w-40 h-40">
+			<div class=" block w-[15%] h-40">
 				<BookDetails book={selectedBook} />
 			</div>
-		</React.Fragment>
+		</div>
 	);
 };
 
