@@ -4,7 +4,7 @@ import BookList from './components/BookList';
 
 // create client "apollo" for node graphql server
 const client = new ApolloClient({
-	uri: 'http://localhost:4000/graphql',
+	uri: 'https://hq-1jzj.onrender.com',
 	cache: new InMemoryCache()
 });
 console.log('v');
